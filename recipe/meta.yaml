@@ -26,13 +26,15 @@ requirements:
     - toml
     - typing-extensions
     - dataclasses
-    - isort
+  run_constrained:
+    - isort  >=5.0.1
 
 test:
   imports:
     - darker
   requires:
     - pip
+    - isort
   commands:
     - pip check
     - darker --help
