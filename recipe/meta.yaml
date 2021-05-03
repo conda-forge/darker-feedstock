@@ -1,5 +1,5 @@
 {% set name = "darker" %}
-{% set version = "1.2.2" %}
+{% set version = "1.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3a840c2cedec7e4d13c26c450d94f31bd872375450a0c057b9276cc9c2dbad5c
+  sha256: be660bade7045e964a7bd682cd154f2b7e1f7ce9b410bcc5b746f9dddaa14723
 
 build:
-  # noarch: python
-  skip: True  # [win]
+  noarch: python
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
@@ -25,8 +24,9 @@ requirements:
     - python  >=3.6
     - black  >=20.0.0,<21.0.0
     - toml
-    - typing-extensions  # [py<38]
-    - dataclasses        # [py<37]
+    - typing-extensions
+    - dataclasses
+    - isort
 
 test:
   imports:
