@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python  >=3.6
-    - black  >=20.0.0,<21.0.0
+    - black  >=21.5b1,<=21.8b0
     - toml
     - typing-extensions
     - dataclasses
@@ -34,6 +34,7 @@ test:
     - darker
   requires:
     - pip
+    - black  >=21.7b1
     - isort
   commands:
     - pip check
