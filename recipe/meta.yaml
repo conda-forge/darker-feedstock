@@ -1,5 +1,5 @@
 {% set name = "darker" %}
-{% set version = "1.2.3" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: be660bade7045e964a7bd682cd154f2b7e1f7ce9b410bcc5b746f9dddaa14723
+  sha256: 31a675c871dfdf02805f432afe66e0c32da231eca202aa2000e058120b61ca0e
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - darker = darker.__main__:main
 
@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python  >=3.6
-    - black  >=20.0.0,<21.0.0
+    - black  >=21.5b1,<=21.8b0
     - toml
     - typing-extensions
     - dataclasses
@@ -34,6 +34,7 @@ test:
     - darker
   requires:
     - pip
+    - black  >=21.7b1
     - isort
   commands:
     - pip check
@@ -45,7 +46,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.rst
-  summary: 'Apply black reformatting to Python files only in regions changed since a given commit'
+  summary: Apply black reformatting to Python files only in regions changed since a given commit
   dev_url: https://github.com/akaihola/darker
 
 extra:
