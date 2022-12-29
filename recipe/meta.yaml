@@ -1,5 +1,5 @@
 {% set name = "darker" %}
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d41bed9e852d48b07aeaecfe7f9525afa6a7d5c0ca2a6b0778ebbdd9346ff443
+  sha256: adcf696679bdc5db9fefe90aa7ee5c71cda3edac2e0671266f1d5e621bab1686
 
 build:
   noarch: python
