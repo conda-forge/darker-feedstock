@@ -18,16 +18,17 @@ build:
 
 requirements:
   host:
-    - python  >=3.6
+    - python  >=3.7
     - pip
   run:
-    - python  >=3.6
+    - python  >=3.7
     - black  >=21.5b1
-    - toml
+    - toml   >=0.10.0
     - typing-extensions
-    - dataclasses
   run_constrained:
-    - isort  >=5.0.1
+    - flynt    >=0.76
+    - isort    >=5.0.1
+    - Pygments >=2.4.0
 
 test:
   imports:
