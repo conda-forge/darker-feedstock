@@ -26,7 +26,7 @@ requirements:
     - toml   >=0.10.0
     - typing-extensions
   run_constrained:
-    - flynt    >=0.76
+    - flynt    >=0.76,<0.78
     - isort    >=5.0.1
     - Pygments >=2.4.0
 
