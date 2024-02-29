@@ -22,11 +22,11 @@ requirements:
     - pip
   run:
     - python  >=3.7
-    - black  >=21.5b1
+    - black  >=21.5b1,<24.2
     - toml   >=0.10.0
     - typing-extensions
   run_constrained:
-    - flynt    >=0.76
+    - flynt    >=0.76,<0.78
     - isort    >=5.0.1
     - Pygments >=2.4.0
 
@@ -35,8 +35,8 @@ test:
     - darker
   requires:
     - pip
-    - black  >=21.7b1
-    - isort
+    - black  >=21.7b1,<24.2
+    - isort  >=5.0.1
   commands:
     - pip check
     - darker --help
