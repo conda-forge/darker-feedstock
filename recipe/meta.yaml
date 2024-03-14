@@ -1,5 +1,5 @@
 {% set name = "darker" %}
-{% set version = "1.7.3" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7c9e7bb216f1d366984de5064b2dd63e86442131f7013d384d4ce6d2bf82df64
+  sha256: d3f01a7cd777aa6e37a96ee35651926629dfb31e3d14adb1ae174aa2214f79eb
 
 build:
   noarch: python
@@ -18,13 +18,14 @@ build:
 
 requirements:
   host:
-    - python  >=3.7
+    - python  >=3.8
     - pip
   run:
-    - python  >=3.7
-    - black  >=21.5b1,<24.2
+    - python  >=3.8
+    - black  >=22.3.0
+    - darkgraylib  >=1.0.0,<1.1.dev0
+    - graylint  >=1.0.0,<1.1.dev0
     - toml   >=0.10.0
-    - typing-extensions
   run_constrained:
     - flynt    >=0.76,<0.78
     - isort    >=5.0.1
@@ -35,7 +36,9 @@ test:
     - darker
   requires:
     - pip
-    - black  >=21.7b1,<24.2
+    - black  >=22.3.0
+    - darkgraylib  >=1.0.0,<1.1.dev0
+    - graylint  >=1.0.0,<1.1.dev0
     - isort  >=5.0.1
   commands:
     - pip check
