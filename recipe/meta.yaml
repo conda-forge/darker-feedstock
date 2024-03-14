@@ -21,11 +21,11 @@ requirements:
     - python  >=3.8
     - pip
   run:
-    - python      >=3.8
-    - black       >=22.3.0
-    - darkgraylib ~=1.0.0
-    - graylint    ~=1.0.0
-    - toml        >=0.10.0
+    - python  >=3.8
+    - black  >=22.3.0
+    - darkgraylib  >=1.0.0,<1.1.dev0
+    - graylint  >=1.0.0,<1.1.dev0
+    - toml   >=0.10.0
   run_constrained:
     - flynt    >=0.76,<0.78
     - isort    >=5.0.1
@@ -36,10 +36,10 @@ test:
     - darker
   requires:
     - pip
-    - black       >=22.3.0
-    - darkgraylib ~=1.0.0
-    - graylint    ~=1.0.0
-    - isort       >=5.0.1
+    - black  >=22.3.0
+    - darkgraylib  >=1.0.0,<1.1.dev0
+    - graylint  >=1.0.0,<1.1.dev0
+    - isort  >=5.0.1
   commands:
     - pip check
     - darker --help
