@@ -1,5 +1,5 @@
 {% set name = "darker" %}
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d3f01a7cd777aa6e37a96ee35651926629dfb31e3d14adb1ae174aa2214f79eb
+  sha256: 13ce2f14ac416d3032b7bc12d650a098416794df1f40308bd7818a17162fb639
 
 build:
   noarch: python
@@ -23,11 +23,11 @@ requirements:
   run:
     - python  >=3.8
     - black  >=22.3.0
-    - darkgraylib  >=1.0.0,<1.1.dev0
-    - graylint  >=1.0.0,<1.1.dev0
+    - darkgraylib  >=1.1.1,<1.2.dev0
+    - graylint  >=1.0.1,<1.1.dev0
     - toml   >=0.10.0
   run_constrained:
-    - flynt    >=0.76,<0.78
+    - flynt  >=0.76
     - isort    >=5.0.1
     - Pygments >=2.4.0
 
@@ -37,8 +37,8 @@ test:
   requires:
     - pip
     - black  >=22.3.0
-    - darkgraylib  >=1.0.0,<1.1.dev0
-    - graylint  >=1.0.0,<1.1.dev0
+    - darkgraylib  >=1.1.1,<1.2.dev0
+    - graylint  >=1.0.1,<1.1.dev0
     - isort  >=5.0.1
   commands:
     - pip check
